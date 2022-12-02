@@ -26,7 +26,8 @@ SECRET_KEY = "django-insecure-)lk-z!gmw5v*ijb0*h6p+9&%7^)j6-vo=ptzf#zi%4y+hie2o$
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+ALLOWED_ORIGINS = ['http://*', 'https://*']
+CSRF_TRUSTED_ORIGINS = ALLOWED_ORIGINS.copy()
 
 # Application definition
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "blog.apps.BlogConfig",
 ]
 
 MIDDLEWARE = [
